@@ -12,8 +12,12 @@ struct TodoListView: View {
     var body: some View {
         List{
             ForEach(presenter.todos, id:\.self){ todo in
-                        ListItem(todo: todo)
+                self.presenter.linkBuilder(for: todo) {
+                  ListItem(todo: todo)
+                    .frame(height: 200)
+                }
             }
+            .onDelete(perform: presenter.deleteTodo)
         }
         .navigationBarTitle("Teendők alkalmazás", displayMode: .inline )
         .navigationBarItems(trailing: presenter.makeAddNewButton())
