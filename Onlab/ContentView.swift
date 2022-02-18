@@ -8,10 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-            .padding()
+  @EnvironmentObject var model: DataModel
+
+  var body: some View {
+    NavigationView {
+      VStack(spacing: 32) {
+          TodoListView(presenter:
+            TodoListPresenter(interactor:
+              TodoListInteractor(model: model)))
+
+      }
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {

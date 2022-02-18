@@ -6,3 +6,12 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct Todo: Hashable, Codable {
+    var dx: Int
+    var name: String
+    var description: String
+    var date: Date
+    var isDone: Bool = false
+}
