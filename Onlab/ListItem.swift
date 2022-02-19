@@ -12,7 +12,7 @@ struct ListItem: View {
     @EnvironmentObject var modelData: DataModel
     
     var tododx: Int {
-        modelData.todos.firstIndex(where:{ $0.dx == todo.dx}) ?? 0
+        modelData.todos.firstIndex(where:{ $0 == todo}) ?? 0
     }
     var body: some View {
         HStack{
@@ -33,7 +33,7 @@ struct ListItem: View {
 
 struct ListItem_Previews: PreviewProvider {
     static var previews: some View {
-        ListItem(todo: Todo(dx: 101,name: "peldanev", description: "desc", date: Date()))
+        ListItem(todo: Todo(name: "peldanev", description: "desc", date: Date()))
             .previewLayout(.fixed(width: 300, height: 40))
             .environmentObject(DataModel())
     }

@@ -20,7 +20,7 @@ struct TodoListView: View {
             .onDelete(perform: presenter.deleteTodo)
         }
         .navigationBarTitle("Teendők alkalmazás", displayMode: .inline )
-        .navigationBarItems(trailing: presenter.makeAddNewButton())
+        .navigationBarItems(trailing: presenter.makeButtonForItemAdderView())
     }
 }
 

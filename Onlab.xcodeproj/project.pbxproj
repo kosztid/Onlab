@@ -19,6 +19,13 @@
 		B4AD0C6027C01E7A008CBEBB /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C5F27C01E7A008CBEBB /* ListItem.swift */; };
 		B4AD0C6227C01EFE008CBEBB /* DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C6127C01EFE008CBEBB /* DoneButton.swift */; };
 		B4AD0C6527C024CB008CBEBB /* TodoListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C6427C024CB008CBEBB /* TodoListRouter.swift */; };
+		B4AD0C6827C0E664008CBEBB /* TodoDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C6727C0E664008CBEBB /* TodoDetailPresenter.swift */; };
+		B4AD0C6A27C0E66E008CBEBB /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C6927C0E66E008CBEBB /* TodoDetailView.swift */; };
+		B4AD0C6C27C0E67C008CBEBB /* TodoDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C6B27C0E67C008CBEBB /* TodoDetailInteractor.swift */; };
+		B4AD0C6E27C0E687008CBEBB /* TodoDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C6D27C0E687008CBEBB /* TodoDetailRouter.swift */; };
+		B4AD0C7027C10B2F008CBEBB /* ItemAdderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C6F27C10B2F008CBEBB /* ItemAdderView.swift */; };
+		B4AD0C7327C11BA3008CBEBB /* ItemAdderInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C7227C11BA3008CBEBB /* ItemAdderInteractor.swift */; };
+		B4AD0C7527C11BAC008CBEBB /* ItemAdderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C7427C11BAC008CBEBB /* ItemAdderPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +42,13 @@
 		B4AD0C5F27C01E7A008CBEBB /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		B4AD0C6127C01EFE008CBEBB /* DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneButton.swift; sourceTree = "<group>"; };
 		B4AD0C6427C024CB008CBEBB /* TodoListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListRouter.swift; sourceTree = "<group>"; };
+		B4AD0C6727C0E664008CBEBB /* TodoDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailPresenter.swift; sourceTree = "<group>"; };
+		B4AD0C6927C0E66E008CBEBB /* TodoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
+		B4AD0C6B27C0E67C008CBEBB /* TodoDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailInteractor.swift; sourceTree = "<group>"; };
+		B4AD0C6D27C0E687008CBEBB /* TodoDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailRouter.swift; sourceTree = "<group>"; };
+		B4AD0C6F27C10B2F008CBEBB /* ItemAdderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAdderView.swift; sourceTree = "<group>"; };
+		B4AD0C7227C11BA3008CBEBB /* ItemAdderInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAdderInteractor.swift; sourceTree = "<group>"; };
+		B4AD0C7427C11BAC008CBEBB /* ItemAdderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAdderPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +81,7 @@
 		B4AD0C4427C00DCA008CBEBB /* Onlab */ = {
 			isa = PBXGroup;
 			children = (
+				B4AD0C7127C11B54008CBEBB /* ItemAdderModule */,
 				B4AD0C6627C02506008CBEBB /* TodoDetailModule */,
 				B4AD0C5827C010B7008CBEBB /* TodoListModule */,
 				B4AD0C5327C00E4D008CBEBB /* Entities */,
@@ -111,8 +126,22 @@
 		B4AD0C6627C02506008CBEBB /* TodoDetailModule */ = {
 			isa = PBXGroup;
 			children = (
+				B4AD0C6727C0E664008CBEBB /* TodoDetailPresenter.swift */,
+				B4AD0C6927C0E66E008CBEBB /* TodoDetailView.swift */,
+				B4AD0C6B27C0E67C008CBEBB /* TodoDetailInteractor.swift */,
+				B4AD0C6D27C0E687008CBEBB /* TodoDetailRouter.swift */,
 			);
 			path = TodoDetailModule;
+			sourceTree = "<group>";
+		};
+		B4AD0C7127C11B54008CBEBB /* ItemAdderModule */ = {
+			isa = PBXGroup;
+			children = (
+				B4AD0C6F27C10B2F008CBEBB /* ItemAdderView.swift */,
+				B4AD0C7227C11BA3008CBEBB /* ItemAdderInteractor.swift */,
+				B4AD0C7427C11BAC008CBEBB /* ItemAdderPresenter.swift */,
+			);
+			path = ItemAdderModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,14 +215,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4AD0C5C27C010DA008CBEBB /* TodoListPresenter.swift in Sources */,
+				B4AD0C6E27C0E687008CBEBB /* TodoDetailRouter.swift in Sources */,
+				B4AD0C6827C0E664008CBEBB /* TodoDetailPresenter.swift in Sources */,
 				B4AD0C4827C00DCA008CBEBB /* ContentView.swift in Sources */,
+				B4AD0C7027C10B2F008CBEBB /* ItemAdderView.swift in Sources */,
 				B4AD0C6227C01EFE008CBEBB /* DoneButton.swift in Sources */,
 				B4AD0C5727C00FBB008CBEBB /* DataModel.swift in Sources */,
 				B4AD0C5A27C010CA008CBEBB /* TodoListView.swift in Sources */,
 				B4AD0C6027C01E7A008CBEBB /* ListItem.swift in Sources */,
+				B4AD0C6C27C0E67C008CBEBB /* TodoDetailInteractor.swift in Sources */,
+				B4AD0C6A27C0E66E008CBEBB /* TodoDetailView.swift in Sources */,
+				B4AD0C7527C11BAC008CBEBB /* ItemAdderPresenter.swift in Sources */,
 				B4AD0C6527C024CB008CBEBB /* TodoListRouter.swift in Sources */,
 				B4AD0C5527C00E64008CBEBB /* Todo.swift in Sources */,
 				B4AD0C5E27C010EB008CBEBB /* TodoListInteractor.swift in Sources */,
+				B4AD0C7327C11BA3008CBEBB /* ItemAdderInteractor.swift in Sources */,
 				B4AD0C4627C00DCA008CBEBB /* OnlabApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

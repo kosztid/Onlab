@@ -38,9 +38,7 @@ class TodoListPresenter: ObservableObject{
         }
     }
     
-    func makeAddNewButton() -> some View {
-        Button{} label: {
-            Text("Add")
-        }
+    func makeButtonForItemAdderView() -> some View {
+        NavigationLink("Add", destination: router.makeAdderView(model: interactor.model))
     }
 }

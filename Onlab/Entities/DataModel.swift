@@ -22,9 +22,6 @@ final class DataModel: ObservableObject{
     init(){
         loadTodos()
         self.count = todos.count
-        if todos.count == 0 {
-            todos.append(Todo(dx: 0, name: "Teszter", description: "Tesztd", date: Date(), isDone: true))
-        }
     }
     func deleteRow(at indexSet: IndexSet) {
         todos.remove(atOffsets: indexSet)
@@ -33,6 +30,11 @@ final class DataModel: ObservableObject{
     func addItem(todo: Todo){
         todos.append(todo)
         self.count += 1
+    }
+    func ToggleDone(todo: Todo){
+        if let tododx = self.todos.firstIndex(where: {$0 == todo}) {
+            todos[tododx].isDone.toggle()
+        }
     }
     
     func loadTodos(){
