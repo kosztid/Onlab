@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4090B5227C17EA200A9F04C /* IconsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4090B5127C17EA200A9F04C /* IconsListView.swift */; };
+		B4090B5427C17EB300A9F04C /* IconsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4090B5327C17EB300A9F04C /* IconsListPresenter.swift */; };
+		B4090B5627C17EC200A9F04C /* IconsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4090B5527C17EC200A9F04C /* IconsListInteractor.swift */; };
+		B4090B5827C181B800A9F04C /* IconItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4090B5727C181B800A9F04C /* IconItem.swift */; };
+		B4090B5A27C1836A00A9F04C /* IconsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4090B5927C1836A00A9F04C /* IconsListRouter.swift */; };
 		B4AD0C4627C00DCA008CBEBB /* OnlabApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C4527C00DCA008CBEBB /* OnlabApp.swift */; };
 		B4AD0C4827C00DCA008CBEBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C4727C00DCA008CBEBB /* ContentView.swift */; };
 		B4AD0C4A27C00DCE008CBEBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4AD0C4927C00DCE008CBEBB /* Assets.xcassets */; };
@@ -29,6 +34,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B4090B5127C17EA200A9F04C /* IconsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsListView.swift; sourceTree = "<group>"; };
+		B4090B5327C17EB300A9F04C /* IconsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsListPresenter.swift; sourceTree = "<group>"; };
+		B4090B5527C17EC200A9F04C /* IconsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsListInteractor.swift; sourceTree = "<group>"; };
+		B4090B5727C181B800A9F04C /* IconItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconItem.swift; sourceTree = "<group>"; };
+		B4090B5927C1836A00A9F04C /* IconsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsListRouter.swift; sourceTree = "<group>"; };
 		B4AD0C4227C00DCA008CBEBB /* Onlab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Onlab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4AD0C4527C00DCA008CBEBB /* OnlabApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlabApp.swift; sourceTree = "<group>"; };
 		B4AD0C4727C00DCA008CBEBB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +72,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B4090B4F27C16C1800A9F04C /* Additional Small Function Views */ = {
+			isa = PBXGroup;
+			children = (
+				B4AD0C5F27C01E7A008CBEBB /* ListItem.swift */,
+				B4090B5727C181B800A9F04C /* IconItem.swift */,
+			);
+			path = "Additional Small Function Views";
+			sourceTree = "<group>";
+		};
+		B4090B5027C17E7E00A9F04C /* IconsListModule */ = {
+			isa = PBXGroup;
+			children = (
+				B4090B5127C17EA200A9F04C /* IconsListView.swift */,
+				B4090B5327C17EB300A9F04C /* IconsListPresenter.swift */,
+				B4090B5527C17EC200A9F04C /* IconsListInteractor.swift */,
+				B4090B5927C1836A00A9F04C /* IconsListRouter.swift */,
+			);
+			path = IconsListModule;
+			sourceTree = "<group>";
+		};
 		B4AD0C3927C00DCA008CBEBB = {
 			isa = PBXGroup;
 			children = (
@@ -81,11 +111,12 @@
 		B4AD0C4427C00DCA008CBEBB /* Onlab */ = {
 			isa = PBXGroup;
 			children = (
+				B4090B5027C17E7E00A9F04C /* IconsListModule */,
+				B4AD0C5827C010B7008CBEBB /* TodoListModule */,
+				B4090B4F27C16C1800A9F04C /* Additional Small Function Views */,
 				B4AD0C7127C11B54008CBEBB /* ItemAdderModule */,
 				B4AD0C6627C02506008CBEBB /* TodoDetailModule */,
-				B4AD0C5827C010B7008CBEBB /* TodoListModule */,
 				B4AD0C5327C00E4D008CBEBB /* Entities */,
-				B4AD0C5F27C01E7A008CBEBB /* ListItem.swift */,
 				B4AD0C4527C00DCA008CBEBB /* OnlabApp.swift */,
 				B4AD0C4727C00DCA008CBEBB /* ContentView.swift */,
 				B4AD0C4927C00DCE008CBEBB /* Assets.xcassets */,
@@ -216,13 +247,17 @@
 			files = (
 				B4AD0C5C27C010DA008CBEBB /* TodoListPresenter.swift in Sources */,
 				B4AD0C6E27C0E687008CBEBB /* TodoDetailRouter.swift in Sources */,
+				B4090B5427C17EB300A9F04C /* IconsListPresenter.swift in Sources */,
+				B4090B5627C17EC200A9F04C /* IconsListInteractor.swift in Sources */,
 				B4AD0C6827C0E664008CBEBB /* TodoDetailPresenter.swift in Sources */,
+				B4090B5A27C1836A00A9F04C /* IconsListRouter.swift in Sources */,
 				B4AD0C4827C00DCA008CBEBB /* ContentView.swift in Sources */,
 				B4AD0C7027C10B2F008CBEBB /* ItemAdderView.swift in Sources */,
 				B4AD0C6227C01EFE008CBEBB /* DoneButton.swift in Sources */,
 				B4AD0C5727C00FBB008CBEBB /* DataModel.swift in Sources */,
 				B4AD0C5A27C010CA008CBEBB /* TodoListView.swift in Sources */,
 				B4AD0C6027C01E7A008CBEBB /* ListItem.swift in Sources */,
+				B4090B5227C17EA200A9F04C /* IconsListView.swift in Sources */,
 				B4AD0C6C27C0E67C008CBEBB /* TodoDetailInteractor.swift in Sources */,
 				B4AD0C6A27C0E66E008CBEBB /* TodoDetailView.swift in Sources */,
 				B4AD0C7527C11BAC008CBEBB /* ItemAdderPresenter.swift in Sources */,
@@ -231,6 +266,7 @@
 				B4AD0C5E27C010EB008CBEBB /* TodoListInteractor.swift in Sources */,
 				B4AD0C7327C11BA3008CBEBB /* ItemAdderInteractor.swift in Sources */,
 				B4AD0C4627C00DCA008CBEBB /* OnlabApp.swift in Sources */,
+				B4090B5827C181B800A9F04C /* IconItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
