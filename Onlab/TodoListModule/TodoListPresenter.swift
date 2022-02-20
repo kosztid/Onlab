@@ -25,6 +25,9 @@ class TodoListPresenter: ObservableObject{
     func deleteTodo(_ index: IndexSet) {
       interactor.deleteTodo(index)
     }
+    func toggleDone(todo: Todo){
+        interactor.toggleDone(todo: todo)
+    }
     
     func linkBuilder<Content: View>(
         for todo: Todo,

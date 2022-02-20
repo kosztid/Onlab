@@ -10,6 +10,7 @@ import SwiftUI
 struct IconItem: View {
     @State var date = Date()
     var todo: Todo
+    @ObservedObject var presenter: IconsListPresenter
     var body: some View {
         VStack{
             HStack{
@@ -17,7 +18,13 @@ struct IconItem: View {
                     .font(.system(size: 30))
                     .frame(maxWidth: .infinity, alignment: .leading)
                 HStack{
-                    Button(){} label: {Text("DONE")}
+                    Button(){
+                        self.presenter.toggleDone(todo: todo)
+                    } label: {
+                        Label("",systemImage: todo.isDone ? "checkmark.circle" : "circle")
+                            .foregroundColor(todo.isDone ? .green : .red)
+                    }
+                    .buttonStyle(BorderlessButtonStyle())
                 }
             }
             Text(todo.date, style: .date)
@@ -35,7 +42,7 @@ struct IconItem: View {
 
 struct IconItem_Previews: PreviewProvider {
     static var previews: some View {
-        IconItem(todo: Todo(name: "peldanev", description: "desc",date: Date()))
+        IconItem(todo: Todo(name: "peldanev", description: "desc",date: Date()),presenter: IconsListPresenter(interactor: IconsListInteractor(model: DataModel())))
             .previewLayout(.fixed(width: 400, height: 200))
     }
 }

@@ -13,8 +13,8 @@ struct TodoListView: View {
         List{
             ForEach(presenter.todos, id:\.self){ todo in
                 self.presenter.linkBuilder(for: todo) {
-                  ListItem(todo: todo)
-                    .frame(height: 200)
+                    ListItem(todo: todo,presenter: presenter)
+                    .frame(height: 60)
                 }
             }
             .onDelete(perform: presenter.deleteTodo)

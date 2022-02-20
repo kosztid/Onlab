@@ -22,7 +22,9 @@ class IconsListPresenter: ObservableObject{
           .store(in: &cancellables)
     }
     
-    
+    func toggleDone(todo: Todo){
+        interactor.toggleDone(todo: todo)
+    }
     
     func deleteTodo(_ index: IndexSet) {
       interactor.deleteTodo(index)

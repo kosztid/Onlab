@@ -29,9 +29,13 @@ class TodoDetailPresenter: ObservableObject{
     }
     
     func makeDoneButton() -> some View {
-        Button(){self.interactor.ToggleDone()} label: {
-            Text("Done")
+        Button(){
+            self.interactor.ToggleDone()
+        } label: {
+            Label("",systemImage: todo.isDone ? "checkmark.circle" : "circle")
+                .foregroundColor(todo.isDone ? .green : .red)
         }
+        .buttonStyle(BorderlessButtonStyle())
     }
     
 }

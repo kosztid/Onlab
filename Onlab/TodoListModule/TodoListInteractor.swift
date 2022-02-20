@@ -18,6 +18,10 @@ class TodoListInteractor {
         model.addItem(todo: todo)
     }
     
+    func toggleDone(todo: Todo){
+        model.ToggleDone(todo: todo)
+    }
+    
     func deleteTodo(_ index: IndexSet) {
       model.todos.remove(atOffsets: index)
     }

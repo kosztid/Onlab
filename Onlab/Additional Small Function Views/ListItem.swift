@@ -9,23 +9,22 @@ import SwiftUI
 
 struct ListItem: View {
     var todo: Todo
-    @EnvironmentObject var modelData: DataModel
-    
-    var tododx: Int {
-        modelData.todos.firstIndex(where:{ $0 == todo}) ?? 0
-    }
+    @ObservedObject var presenter: TodoListPresenter
+
     var body: some View {
         HStack{
             Text(todo.name)
                 .font(.system(size: 20))
             Spacer()
             
-            if modelData.todos.count != 0 {
-            DoneButton(isSet: $modelData.todos[tododx].isDone)
-                .font(.system(size: 15))
+                Button(){
+                    self.presenter.toggleDone(todo: todo)
+                } label: {
+                    Label("",systemImage: todo.isDone ? "checkmark.circle" : "circle")
+                        .foregroundColor(todo.isDone ? .green : .red)
+                }
+                .buttonStyle(BorderlessButtonStyle())
                 
-            }
-            
         }
         .padding(/*@START_MENU_TOKEN@*/.all, 5.0/*@END_MENU_TOKEN@*/)
     }
@@ -33,7 +32,7 @@ struct ListItem: View {
 
 struct ListItem_Previews: PreviewProvider {
     static var previews: some View {
-        ListItem(todo: Todo(name: "peldanev", description: "desc", date: Date()))
+        ListItem(todo: Todo(name: "peldanev", description: "desc", date: Date()),presenter: TodoListPresenter(interactor: TodoListInteractor(model: DataModel())))
             .previewLayout(.fixed(width: 300, height: 40))
             .environmentObject(DataModel())
     }

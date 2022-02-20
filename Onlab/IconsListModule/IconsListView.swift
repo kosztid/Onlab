@@ -12,7 +12,7 @@ struct IconsListView: View {
     var body: some View {
         List{
             ForEach(presenter.todos, id:\.self){ todo in
-                  IconItem(todo: todo)
+                  IconItem(todo: todo,presenter: presenter)
                     .frame(height: 200)
             }
             .onDelete(perform: presenter.deleteTodo)
