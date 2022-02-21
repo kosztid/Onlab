@@ -29,7 +29,11 @@ class IconsListPresenter: ObservableObject{
     func deleteTodo(_ index: IndexSet) {
       interactor.deleteTodo(index)
     }
-    
+    func makedate(date: String) -> Date{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.date(from: date) ?? Date()
+    }
     func makeButtonForItemAdderView() -> some View {
         NavigationLink("Add", destination: router.makeAdderView(model: interactor.model))
     }

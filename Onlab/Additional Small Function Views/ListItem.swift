@@ -32,7 +32,7 @@ struct ListItem: View {
 
 struct ListItem_Previews: PreviewProvider {
     static var previews: some View {
-        ListItem(todo: Todo(name: "peldanev", description: "desc", date: Date()),presenter: TodoListPresenter(interactor: TodoListInteractor(model: DataModel())))
+        ListItem(todo: Todo(name: "peldanev", description: "desc",date: "01/07/2022",isDone: false),presenter: TodoListPresenter(interactor: TodoListInteractor(model: DataModel())))
             .previewLayout(.fixed(width: 300, height: 40))
             .environmentObject(DataModel())
     }

@@ -6,12 +6,12 @@
 //
 
 import Foundation
-
-import Foundation
 import SwiftUI
+import FirebaseFirestore
 
 final class DataModel: ObservableObject{
     let todoskey: String = "todoskey"
+    
     @Published var count: Int = 0
     @Published var todos: [Todo] = [
     ]{
@@ -20,8 +20,28 @@ final class DataModel: ObservableObject{
         }
     }
     init(){
-        loadTodos()
+        pullFromDB()
         self.count = todos.count
+    }
+    
+    func pullFromDB(){
+        let db = Firestore.firestore()
+        db.collection("todos").getDocuments { snapshot, error in
+            if error == nil {
+                //no error
+                if let snapshot = snapshot{
+                    DispatchQueue.main.async {
+                        self.todos = snapshot.documents.map { d in
+                            return Todo(name: d["name"] as? String ?? "", description: d["description"]  as? String ?? "", date: d["date"]  as? String ?? "", isDone: d["isDone"]  as? Bool ?? false)
+                        }
+                    }
+                    
+                }
+            }
+            else {
+                //error handling
+            }
+        }
     }
     func deleteRow(at indexSet: IndexSet) {
         todos.remove(atOffsets: indexSet)

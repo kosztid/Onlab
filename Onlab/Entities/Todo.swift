@@ -11,6 +11,6 @@ import SwiftUI
 struct Todo: Hashable, Codable {
     var name: String
     var description: String
-    var date: Date
-    var isDone: Bool = false
+    var date: String
+    var isDone: Bool
 }

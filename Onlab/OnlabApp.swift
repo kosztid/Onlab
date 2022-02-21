@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
-
+import Firebase
 @main
 struct OnlabApp: App {
     @StateObject private var modelData = DataModel()
+    init() {
+            FirebaseApp.configure()
+        }
     var body: some Scene {
         WindowGroup {
             ContentView()

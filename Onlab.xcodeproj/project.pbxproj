@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		805253615AF40C768850DF5A /* Pods_Onlab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08718895FE01115D91B6E583 /* Pods_Onlab.framework */; };
 		B4090B5227C17EA200A9F04C /* IconsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4090B5127C17EA200A9F04C /* IconsListView.swift */; };
 		B4090B5427C17EB300A9F04C /* IconsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4090B5327C17EB300A9F04C /* IconsListPresenter.swift */; };
 		B4090B5627C17EC200A9F04C /* IconsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4090B5527C17EC200A9F04C /* IconsListInteractor.swift */; };
 		B4090B5827C181B800A9F04C /* IconItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4090B5727C181B800A9F04C /* IconItem.swift */; };
 		B4090B5A27C1836A00A9F04C /* IconsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4090B5927C1836A00A9F04C /* IconsListRouter.swift */; };
+		B41CF82E27C3D459005DC38D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B41CF82D27C3D459005DC38D /* GoogleService-Info.plist */; };
 		B4AD0C4627C00DCA008CBEBB /* OnlabApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C4527C00DCA008CBEBB /* OnlabApp.swift */; };
 		B4AD0C4827C00DCA008CBEBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C4727C00DCA008CBEBB /* ContentView.swift */; };
 		B4AD0C4A27C00DCE008CBEBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4AD0C4927C00DCE008CBEBB /* Assets.xcassets */; };
@@ -22,7 +24,6 @@
 		B4AD0C5C27C010DA008CBEBB /* TodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C5B27C010DA008CBEBB /* TodoListPresenter.swift */; };
 		B4AD0C5E27C010EB008CBEBB /* TodoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C5D27C010EB008CBEBB /* TodoListInteractor.swift */; };
 		B4AD0C6027C01E7A008CBEBB /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C5F27C01E7A008CBEBB /* ListItem.swift */; };
-		B4AD0C6227C01EFE008CBEBB /* DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C6127C01EFE008CBEBB /* DoneButton.swift */; };
 		B4AD0C6527C024CB008CBEBB /* TodoListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C6427C024CB008CBEBB /* TodoListRouter.swift */; };
 		B4AD0C6827C0E664008CBEBB /* TodoDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C6727C0E664008CBEBB /* TodoDetailPresenter.swift */; };
 		B4AD0C6A27C0E66E008CBEBB /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C6927C0E66E008CBEBB /* TodoDetailView.swift */; };
@@ -34,11 +35,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08718895FE01115D91B6E583 /* Pods_Onlab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Onlab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2065E60C80211ED8CC03C3DA /* Pods-Onlab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onlab.debug.xcconfig"; path = "Target Support Files/Pods-Onlab/Pods-Onlab.debug.xcconfig"; sourceTree = "<group>"; };
+		AE3670905C9D0983D0E67614 /* Pods-Onlab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onlab.release.xcconfig"; path = "Target Support Files/Pods-Onlab/Pods-Onlab.release.xcconfig"; sourceTree = "<group>"; };
 		B4090B5127C17EA200A9F04C /* IconsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsListView.swift; sourceTree = "<group>"; };
 		B4090B5327C17EB300A9F04C /* IconsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsListPresenter.swift; sourceTree = "<group>"; };
 		B4090B5527C17EC200A9F04C /* IconsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsListInteractor.swift; sourceTree = "<group>"; };
 		B4090B5727C181B800A9F04C /* IconItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconItem.swift; sourceTree = "<group>"; };
 		B4090B5927C1836A00A9F04C /* IconsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsListRouter.swift; sourceTree = "<group>"; };
+		B41CF82D27C3D459005DC38D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B4AD0C4227C00DCA008CBEBB /* Onlab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Onlab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4AD0C4527C00DCA008CBEBB /* OnlabApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlabApp.swift; sourceTree = "<group>"; };
 		B4AD0C4727C00DCA008CBEBB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,7 +55,6 @@
 		B4AD0C5B27C010DA008CBEBB /* TodoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenter.swift; sourceTree = "<group>"; };
 		B4AD0C5D27C010EB008CBEBB /* TodoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListInteractor.swift; sourceTree = "<group>"; };
 		B4AD0C5F27C01E7A008CBEBB /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
-		B4AD0C6127C01EFE008CBEBB /* DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneButton.swift; sourceTree = "<group>"; };
 		B4AD0C6427C024CB008CBEBB /* TodoListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListRouter.swift; sourceTree = "<group>"; };
 		B4AD0C6727C0E664008CBEBB /* TodoDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailPresenter.swift; sourceTree = "<group>"; };
 		B4AD0C6927C0E66E008CBEBB /* TodoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
@@ -66,12 +70,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				805253615AF40C768850DF5A /* Pods_Onlab.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A206B6849FE271ACF5AF76E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08718895FE01115D91B6E583 /* Pods_Onlab.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1A874750BE484918F2CD293 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2065E60C80211ED8CC03C3DA /* Pods-Onlab.debug.xcconfig */,
+				AE3670905C9D0983D0E67614 /* Pods-Onlab.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B4090B4F27C16C1800A9F04C /* Additional Small Function Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +119,8 @@
 			children = (
 				B4AD0C4427C00DCA008CBEBB /* Onlab */,
 				B4AD0C4327C00DCA008CBEBB /* Products */,
+				B1A874750BE484918F2CD293 /* Pods */,
+				A206B6849FE271ACF5AF76E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,10 +142,10 @@
 				B4AD0C6627C02506008CBEBB /* TodoDetailModule */,
 				B4AD0C5327C00E4D008CBEBB /* Entities */,
 				B4AD0C4527C00DCA008CBEBB /* OnlabApp.swift */,
+				B41CF82D27C3D459005DC38D /* GoogleService-Info.plist */,
 				B4AD0C4727C00DCA008CBEBB /* ContentView.swift */,
 				B4AD0C4927C00DCE008CBEBB /* Assets.xcassets */,
 				B4AD0C4B27C00DCE008CBEBB /* Preview Content */,
-				B4AD0C6127C01EFE008CBEBB /* DoneButton.swift */,
 			);
 			path = Onlab;
 			sourceTree = "<group>";
@@ -182,9 +206,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4AD0C5027C00DCE008CBEBB /* Build configuration list for PBXNativeTarget "Onlab" */;
 			buildPhases = (
+				11CA3FA1F6B12ECBBEA78066 /* [CP] Check Pods Manifest.lock */,
 				B4AD0C3E27C00DCA008CBEBB /* Sources */,
 				B4AD0C3F27C00DCA008CBEBB /* Frameworks */,
 				B4AD0C4027C00DCA008CBEBB /* Resources */,
+				DCBEFDBA0DE5650FA052DCD1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,10 +261,53 @@
 			files = (
 				B4AD0C4D27C00DCE008CBEBB /* Preview Assets.xcassets in Resources */,
 				B4AD0C4A27C00DCE008CBEBB /* Assets.xcassets in Resources */,
+				B41CF82E27C3D459005DC38D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11CA3FA1F6B12ECBBEA78066 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Onlab-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCBEFDBA0DE5650FA052DCD1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Onlab/Pods-Onlab-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Onlab/Pods-Onlab-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Onlab/Pods-Onlab-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B4AD0C3E27C00DCA008CBEBB /* Sources */ = {
@@ -253,7 +322,6 @@
 				B4090B5A27C1836A00A9F04C /* IconsListRouter.swift in Sources */,
 				B4AD0C4827C00DCA008CBEBB /* ContentView.swift in Sources */,
 				B4AD0C7027C10B2F008CBEBB /* ItemAdderView.swift in Sources */,
-				B4AD0C6227C01EFE008CBEBB /* DoneButton.swift in Sources */,
 				B4AD0C5727C00FBB008CBEBB /* DataModel.swift in Sources */,
 				B4AD0C5A27C010CA008CBEBB /* TodoListView.swift in Sources */,
 				B4AD0C6027C01E7A008CBEBB /* ListItem.swift in Sources */,
@@ -391,6 +459,7 @@
 		};
 		B4AD0C5127C00DCE008CBEBB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2065E60C80211ED8CC03C3DA /* Pods-Onlab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -420,6 +489,7 @@
 		};
 		B4AD0C5227C00DCE008CBEBB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE3670905C9D0983D0E67614 /* Pods-Onlab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>913672297043-t43cvrp4j1gjn4sbngvgske7pgtk0j29.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.913672297043-t43cvrp4j1gjn4sbngvgske7pgtk0j29</string>
+	<key>API_KEY</key>
+	<string>AIzaSyArhHlCkNc0woGXPIWDetYayHCGlpP5oxI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>913672297043</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.kosztid.Onlab</string>
+	<key>PROJECT_ID</key>
+	<string>onlab-5fc30</string>
+	<key>STORAGE_BUCKET</key>
+	<string>onlab-5fc30.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:913672297043:ios:5ae94815d37ffd06ee84a6</string>
+</dict>
+</plist>

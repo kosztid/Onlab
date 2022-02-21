@@ -15,7 +15,11 @@ class ItemAdderPresenter: ObservableObject{
         self.interactor = interactor
     }
     
-    func addItem(todo: Todo){
-        self.interactor.addItem(todo: todo)
+    func addItem(name: String, description: String, date: Date){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let stringdate = dateFormatter.string(from: date)
+        
+        self.interactor.addItem(todo: Todo(name: name, description: description, date: stringdate, isDone: false))
     }
 }

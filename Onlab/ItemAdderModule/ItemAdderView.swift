@@ -38,7 +38,7 @@ struct ItemAdderView: View {
                                 Text("Select a date")
                             }
                 Button{
-                    presenter.addItem(todo: Todo(name:todoname,description: tododescription, date: tododate))
+                    presenter.addItem(name:todoname,description: tododescription, date: tododate)
                     self.presentationMode.wrappedValue.dismiss()
                 } label : {
                     Text("Add")

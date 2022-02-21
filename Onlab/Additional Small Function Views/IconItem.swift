@@ -27,7 +27,7 @@ struct IconItem: View {
                     .buttonStyle(BorderlessButtonStyle())
                 }
             }
-            Text(todo.date, style: .date)
+            Text(presenter.makedate(date: todo.date), style: .date)
                 .fontWeight(.bold)
                 .italic()
                 .foregroundColor(Color.gray)
@@ -42,7 +42,7 @@ struct IconItem: View {
 
 struct IconItem_Previews: PreviewProvider {
     static var previews: some View {
-        IconItem(todo: Todo(name: "peldanev", description: "desc",date: Date()),presenter: IconsListPresenter(interactor: IconsListInteractor(model: DataModel())))
+        IconItem(todo: Todo(name: "peldanev", description: "desc",date: "01/07/2022",isDone: false),presenter: IconsListPresenter(interactor: IconsListInteractor(model: DataModel())))
             .previewLayout(.fixed(width: 400, height: 200))
     }
 }

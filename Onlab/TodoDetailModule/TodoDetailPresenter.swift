@@ -19,12 +19,14 @@ class TodoDetailPresenter: ObservableObject{
     @Published var isDone : Bool
     
     init(interactor: TodoDetailInteractor){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         self.interactor = interactor
         self.todo = interactor.todo
         
         self.name = todo.name
         self.description = todo.description
-        self.date = todo.date
+        self.date = dateFormatter.date(from: todo.date) ?? Date()
         self.isDone = todo.isDone
     }
     
