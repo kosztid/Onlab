@@ -74,11 +74,15 @@ final class DataModel: ObservableObject{
     }
     func signIn(email: String, password: String){
         let auth = Auth.auth()
+
         auth.signIn(withEmail: email, password: password) { result, error in
             guard result != nil, error == nil else {
                 return
             }
-            self.isSignedIn = true
+            DispatchQueue.main.async {
+                self.isSignedIn = true
+            }
+            
         }
     }
     

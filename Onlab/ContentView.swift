@@ -16,35 +16,36 @@ struct ContentView: View {
     }
     
     var body: some View {
-        /*
-         TabView(selection: $selection){
-            NavigationView {
-                VStack(spacing: 32) {
-                    TodoListView(presenter:
-                                    TodoListPresenter(interactor:
-                                                        TodoListInteractor(model: model)))
-
-                }
-            }
-                .tabItem { Label("List", systemImage: "list.bullet") }
-                .tag(Tab.list)
-            
-            NavigationView {
-                VStack(spacing: 32) {
-                    IconsListView(presenter:
-                                    IconsListPresenter(interactor:
-                                                        IconsListInteractor(model: model)))
-
-                }
-            }
-                .tabItem {
-                    Label("Icons", systemImage: "list.bullet")
-                }
-                .tag(Tab.icons)
+        if model.isSignedIn == false {
+            LoginScreenView(presenter: LoginScreenPresenter(interactor: LoginScreenInteractor(model: model)))
         }
-         */
-       // LoginScreenView(presenter: LoginScreenPresenter(interactor: LoginScreenInteractor(model: model)))
-        RegisterScreenView(presenter: RegisterScreenPresenter(interactor: RegisterScreenInteractor(model: model)))
+        else {
+            TabView(selection: $selection){
+               NavigationView {
+                   VStack(spacing: 32) {
+                       TodoListView(presenter:
+                                       TodoListPresenter(interactor:
+                                                           TodoListInteractor(model: model)))
+
+                   }
+               }
+                   .tabItem { Label("List", systemImage: "list.bullet") }
+                   .tag(Tab.list)
+               
+               NavigationView {
+                   VStack(spacing: 32) {
+                       IconsListView(presenter:
+                                       IconsListPresenter(interactor:
+                                                           IconsListInteractor(model: model)))
+
+                   }
+               }
+                   .tabItem {
+                       Label("Icons", systemImage: "list.bullet")
+                   }
+                   .tag(Tab.icons)
+           }
+        }
     }
 }
 
