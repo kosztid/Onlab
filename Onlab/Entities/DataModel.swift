@@ -8,10 +8,11 @@
 import Foundation
 import SwiftUI
 import FirebaseFirestore
+import FirebaseAuth
 
 final class DataModel: ObservableObject{
     let todoskey: String = "todoskey"
-    
+    @Published var isSignedIn = false
     @Published var count: Int = 0
     @Published var todos: [Todo] = [
     ]{
@@ -71,9 +72,25 @@ final class DataModel: ObservableObject{
         }
         
     }
-    func deleteRow(at indexSet: IndexSet) {
-        todos.remove(atOffsets: indexSet)
+    func signIn(email: String, password: String){
+        let auth = Auth.auth()
+        auth.signIn(withEmail: email, password: password) { result, error in
+            guard result != nil, error == nil else {
+                return
+            }
+            self.isSignedIn = true
         }
+    }
+    
+    func register(email: String, password: String){
+        let auth = Auth.auth()
+        auth.createUser(withEmail: email, password: password) { result, error in
+            guard result != nil, error == nil else {
+                return
+            }
+        }
+        
+    }
     
     func addItem(todo: Todo){
         todos.append(todo)

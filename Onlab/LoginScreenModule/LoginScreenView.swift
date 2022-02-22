@@ -38,7 +38,7 @@ struct LoginScreenView: View {
                     .disableAutocorrection(true)
 
                 Button{
-                    presenter.login()
+                    presenter.signIn(email: self.email, password: self.password)
                 } label : {
                     Text("Bejelentkezés")
                         .frame(height:50)
@@ -58,6 +58,6 @@ struct LoginScreenView: View {
 
 struct LoginScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginScreenView(presenter: LoginScreenPresenter())
+        LoginScreenView(presenter: LoginScreenPresenter(interactor: LoginScreenInteractor(model: DataModel())))
     }
 }

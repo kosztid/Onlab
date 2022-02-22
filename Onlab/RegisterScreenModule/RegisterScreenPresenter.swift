@@ -7,9 +7,15 @@
 
 import Foundation
 
-class RegisterScreenPresenter:ObservableObject{
+
+class RegisterScreenPresenter: ObservableObject{
+    private let interactor: RegisterScreenInteractor
     
-    func register(){
-        
+    init(interactor: RegisterScreenInteractor){
+        self.interactor = interactor
+    }
+    
+    func register(email: String, password: String){
+        interactor.register(email: email, password: password)
     }
 }

@@ -16,7 +16,8 @@ struct ContentView: View {
     }
     
     var body: some View {
-        TabView(selection: $selection){
+        /*
+         TabView(selection: $selection){
             NavigationView {
                 VStack(spacing: 32) {
                     TodoListView(presenter:
@@ -41,8 +42,10 @@ struct ContentView: View {
                 }
                 .tag(Tab.icons)
         }
-        
-  }
+         */
+       // LoginScreenView(presenter: LoginScreenPresenter(interactor: LoginScreenInteractor(model: model)))
+        RegisterScreenView(presenter: RegisterScreenPresenter(interactor: RegisterScreenInteractor(model: model)))
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {

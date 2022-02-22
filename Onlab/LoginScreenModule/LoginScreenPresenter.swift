@@ -7,7 +7,13 @@
 
 import Foundation
 class LoginScreenPresenter: ObservableObject{
-    func login(){
-        
+    private let interactor: LoginScreenInteractor
+    
+    init(interactor: LoginScreenInteractor){
+        self.interactor = interactor
+    }
+    
+    func signIn(email: String, password: String){
+        interactor.signIn(email: email, password: password)
     }
 }

@@ -38,7 +38,7 @@ struct RegisterScreenView: View {
                     .disableAutocorrection(true)
 
                 Button{
-                    presenter.register()
+                    presenter.register(email: self.email, password: self.password)
                 } label : {
                     Text("Fiók létrehozása")
                         .frame(height:50)
@@ -58,6 +58,6 @@ struct RegisterScreenView: View {
 
 struct RegisterScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterScreenView(presenter: RegisterScreenPresenter())
+        RegisterScreenView(presenter: RegisterScreenPresenter(interactor: RegisterScreenInteractor(model: DataModel())))
     }
 }
