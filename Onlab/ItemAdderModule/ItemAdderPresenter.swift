@@ -20,6 +20,6 @@ class ItemAdderPresenter: ObservableObject{
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let stringdate = dateFormatter.string(from: date)
         
-        self.interactor.addItem(todo: Todo(name: name, description: description, date: stringdate, isDone: false))
+        self.interactor.addItem(todo: Todo(id: "asd",name: name, description: description, date: stringdate, isDone: false))
     }
 }

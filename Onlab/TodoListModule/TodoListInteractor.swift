@@ -23,7 +23,8 @@ class TodoListInteractor {
     }
     
     func deleteTodo(_ index: IndexSet) {
-      model.todos.remove(atOffsets: index)
+        //model.todos.remove(atOffsets: index)
+          model.deleteTodo(todoToDelete: model.todos[index.first!])
     }
 
 }

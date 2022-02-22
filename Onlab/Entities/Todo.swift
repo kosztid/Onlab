@@ -8,7 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct Todo: Hashable, Codable {
+struct Todo: Identifiable, Hashable, Codable {
+    var id: String
     var name: String
     var description: String
     var date: String

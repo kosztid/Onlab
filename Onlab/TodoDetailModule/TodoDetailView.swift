@@ -47,7 +47,7 @@ struct TodoDetailView: View {
 
 struct TodoDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        let interactor = TodoDetailInteractor(todo: Todo(name: "Teszttodo", description: "leiras", date: "02/02/2022", isDone: true), model: DataModel())
+        let interactor = TodoDetailInteractor(todo: Todo(id: "asda", name: "Teszttodo", description: "leiras", date: "02/02/2022", isDone: true), model: DataModel())
         let presenter = TodoDetailPresenter(interactor: interactor)
         TodoDetailView(presenter: presenter)
             .environmentObject(DataModel())
