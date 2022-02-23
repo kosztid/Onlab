@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct RegisterScreenView: View {
+    @Environment(\.presentationMode) private var presentationMode
     @ObservedObject var presenter: RegisterScreenPresenter
     @State var email : String = ""
     @State var password : String = ""
+    @State var isSecured: Bool = true
     var body: some View {
         ScrollView {
             VStack{
@@ -29,16 +31,38 @@ struct RegisterScreenView: View {
                     .cornerRadius(10)
                     .disableAutocorrection(true)
                 
-                TextField("Password", text: $password)
-                    .padding(.horizontal)
-                    .frame(height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    .font(.system(size: 20))
-                    .background(Color(#colorLiteral(red: 0.7940730453, green: 0.8693394661, blue: 0.850419879, alpha: 1)))
-                    .cornerRadius(10)
-                    .disableAutocorrection(true)
+                ZStack(alignment: .trailing) {
+                            if isSecured {
+                                SecureField("Password", text: $password)
+                                    .padding(.horizontal)
+                                    .frame(height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                    .font(.system(size: 20))
+                                    .background(Color(#colorLiteral(red: 0, green: 0.6347943544, blue: 1, alpha: 0.1996611511)))
+                                    .cornerRadius(10)
+                                    .disableAutocorrection(true)
+                            } else {
+                                TextField("Password", text: $password)
+                                    .padding(.horizontal)
+                                    .frame(height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                    .font(.system(size: 20))
+                                    .background(Color(#colorLiteral(red: 0, green: 0.6347943544, blue: 1, alpha: 0.1996611511)))
+                                    .cornerRadius(10)
+                                    .disableAutocorrection(true)
+                            }
+                            Button(action: {
+                                isSecured.toggle()
+                            }) {
+                                Image(systemName: self.isSecured ? "eye.slash" : "eye")
+                                    .accentColor(.gray)
+                            }.offset(x: -20)
+                        }
 
                 Button{
+                    guard presenter.isValidEmail(email: self.email), self.password.count > 5 else {
+                        return
+                    }
                     presenter.register(email: self.email, password: self.password)
+                    presentationMode.wrappedValue.dismiss()
                 } label : {
                     Text("Fiók létrehozása")
                         .frame(height:50)

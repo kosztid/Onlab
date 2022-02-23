@@ -27,4 +27,8 @@ class LoginScreenPresenter: ObservableObject{
     func toForgotPasswordView() -> some View{
         NavigationLink("Elfelejtett jelszó",destination: Text("elfejeletett pw"))
     }
+    func isValidEmail(email: String) -> Bool {
+        let emailto = NSPredicate(format:"SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")
+        return emailto.evaluate(with: email)
+    }
 }

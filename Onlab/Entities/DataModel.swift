@@ -7,11 +7,13 @@
 
 import Foundation
 import SwiftUI
+import Firebase
 import FirebaseFirestore
 import FirebaseAuth
 
 final class DataModel: ObservableObject{
     let todoskey: String = "todoskey"
+    let authreg : Auth
     @Published var isSignedIn = false
     @Published var count: Int = 0
     @Published var todos: [Todo] = [
@@ -20,6 +22,7 @@ final class DataModel: ObservableObject{
         }
     }
     init(){
+        self.authreg = Auth.auth()
         pullFromDB()
         self.count = todos.count
     }
@@ -87,9 +90,9 @@ final class DataModel: ObservableObject{
     }
     
     func register(email: String, password: String){
-        let auth = Auth.auth()
-        auth.createUser(withEmail: email, password: password) { result, error in
+        authreg.createUser(withEmail: email, password: password) { result, error in
             guard result != nil, error == nil else {
+                print("error creating user")
                 return
             }
         }
