@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		805253615AF40C768850DF5A /* Pods_Onlab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08718895FE01115D91B6E583 /* Pods_Onlab.framework */; };
+		5900B2354A703502D74482B5 /* Pods_Onlab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D29A7CD8343122999FA4D6 /* Pods_Onlab.framework */; };
 		B4090B5227C17EA200A9F04C /* IconsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4090B5127C17EA200A9F04C /* IconsListView.swift */; };
 		B4090B5427C17EB300A9F04C /* IconsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4090B5327C17EB300A9F04C /* IconsListPresenter.swift */; };
 		B4090B5627C17EC200A9F04C /* IconsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4090B5527C17EC200A9F04C /* IconsListInteractor.swift */; };
 		B4090B5827C181B800A9F04C /* IconItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4090B5727C181B800A9F04C /* IconItem.swift */; };
 		B4090B5A27C1836A00A9F04C /* IconsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4090B5927C1836A00A9F04C /* IconsListRouter.swift */; };
+		B4144D8727C7927B00CBF296 /* GoogleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4144D8627C7927B00CBF296 /* GoogleSignInButton.swift */; };
 		B41CF82E27C3D459005DC38D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B41CF82D27C3D459005DC38D /* GoogleService-Info.plist */; };
 		B4AD0C4627C00DCA008CBEBB /* OnlabApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C4527C00DCA008CBEBB /* OnlabApp.swift */; };
 		B4AD0C4827C00DCA008CBEBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C4727C00DCA008CBEBB /* ContentView.swift */; };
@@ -32,17 +33,23 @@
 		B4AD0C7027C10B2F008CBEBB /* ItemAdderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C6F27C10B2F008CBEBB /* ItemAdderView.swift */; };
 		B4AD0C7327C11BA3008CBEBB /* ItemAdderInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C7227C11BA3008CBEBB /* ItemAdderInteractor.swift */; };
 		B4AD0C7527C11BAC008CBEBB /* ItemAdderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AD0C7427C11BAC008CBEBB /* ItemAdderPresenter.swift */; };
+		B4E48D1927C4E7C600130BF5 /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E48D1827C4E7C600130BF5 /* LoginScreenView.swift */; };
+		B4E48D1B27C4E84000130BF5 /* LoginScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E48D1A27C4E84000130BF5 /* LoginScreenPresenter.swift */; };
+		B4E48D1E27C4F1D500130BF5 /* RegisterScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E48D1D27C4F1D500130BF5 /* RegisterScreenView.swift */; };
+		B4E48D2027C4F1FD00130BF5 /* RegisterScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E48D1F27C4F1FD00130BF5 /* RegisterScreenPresenter.swift */; };
+		B4E48D2227C5566700130BF5 /* RegisterScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E48D2127C5566700130BF5 /* RegisterScreenInteractor.swift */; };
+		B4E48D2427C5567300130BF5 /* LoginScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E48D2327C5567300130BF5 /* LoginScreenInteractor.swift */; };
+		B4E48D2627C56B4200130BF5 /* LoginScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E48D2527C56B4200130BF5 /* LoginScreenRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		08718895FE01115D91B6E583 /* Pods_Onlab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Onlab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2065E60C80211ED8CC03C3DA /* Pods-Onlab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onlab.debug.xcconfig"; path = "Target Support Files/Pods-Onlab/Pods-Onlab.debug.xcconfig"; sourceTree = "<group>"; };
-		AE3670905C9D0983D0E67614 /* Pods-Onlab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onlab.release.xcconfig"; path = "Target Support Files/Pods-Onlab/Pods-Onlab.release.xcconfig"; sourceTree = "<group>"; };
+		14EC82F02F1C93895454E4D9 /* Pods-Onlab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onlab.debug.xcconfig"; path = "Target Support Files/Pods-Onlab/Pods-Onlab.debug.xcconfig"; sourceTree = "<group>"; };
 		B4090B5127C17EA200A9F04C /* IconsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsListView.swift; sourceTree = "<group>"; };
 		B4090B5327C17EB300A9F04C /* IconsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsListPresenter.swift; sourceTree = "<group>"; };
 		B4090B5527C17EC200A9F04C /* IconsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsListInteractor.swift; sourceTree = "<group>"; };
 		B4090B5727C181B800A9F04C /* IconItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconItem.swift; sourceTree = "<group>"; };
 		B4090B5927C1836A00A9F04C /* IconsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsListRouter.swift; sourceTree = "<group>"; };
+		B4144D8627C7927B00CBF296 /* GoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
 		B41CF82D27C3D459005DC38D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B4AD0C4227C00DCA008CBEBB /* Onlab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Onlab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4AD0C4527C00DCA008CBEBB /* OnlabApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlabApp.swift; sourceTree = "<group>"; };
@@ -63,6 +70,16 @@
 		B4AD0C6F27C10B2F008CBEBB /* ItemAdderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAdderView.swift; sourceTree = "<group>"; };
 		B4AD0C7227C11BA3008CBEBB /* ItemAdderInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAdderInteractor.swift; sourceTree = "<group>"; };
 		B4AD0C7427C11BAC008CBEBB /* ItemAdderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAdderPresenter.swift; sourceTree = "<group>"; };
+		B4E489B727C6E0D600851286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B4E48D1827C4E7C600130BF5 /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
+		B4E48D1A27C4E84000130BF5 /* LoginScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenPresenter.swift; sourceTree = "<group>"; };
+		B4E48D1D27C4F1D500130BF5 /* RegisterScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenView.swift; sourceTree = "<group>"; };
+		B4E48D1F27C4F1FD00130BF5 /* RegisterScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenPresenter.swift; sourceTree = "<group>"; };
+		B4E48D2127C5566700130BF5 /* RegisterScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenInteractor.swift; sourceTree = "<group>"; };
+		B4E48D2327C5567300130BF5 /* LoginScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenInteractor.swift; sourceTree = "<group>"; };
+		B4E48D2527C56B4200130BF5 /* LoginScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenRouter.swift; sourceTree = "<group>"; };
+		B8D29A7CD8343122999FA4D6 /* Pods_Onlab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Onlab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E6A30372A835404CC7FE14 /* Pods-Onlab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onlab.release.xcconfig"; path = "Target Support Files/Pods-Onlab/Pods-Onlab.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,17 +87,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				805253615AF40C768850DF5A /* Pods_Onlab.framework in Frameworks */,
+				5900B2354A703502D74482B5 /* Pods_Onlab.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A206B6849FE271ACF5AF76E5 /* Frameworks */ = {
+		19740F091E904646AF7D118C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				08718895FE01115D91B6E583 /* Pods_Onlab.framework */,
+				B8D29A7CD8343122999FA4D6 /* Pods_Onlab.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -88,8 +105,8 @@
 		B1A874750BE484918F2CD293 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2065E60C80211ED8CC03C3DA /* Pods-Onlab.debug.xcconfig */,
-				AE3670905C9D0983D0E67614 /* Pods-Onlab.release.xcconfig */,
+				14EC82F02F1C93895454E4D9 /* Pods-Onlab.debug.xcconfig */,
+				E5E6A30372A835404CC7FE14 /* Pods-Onlab.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -99,6 +116,7 @@
 			children = (
 				B4AD0C5F27C01E7A008CBEBB /* ListItem.swift */,
 				B4090B5727C181B800A9F04C /* IconItem.swift */,
+				B4144D8627C7927B00CBF296 /* GoogleSignInButton.swift */,
 			);
 			path = "Additional Small Function Views";
 			sourceTree = "<group>";
@@ -120,7 +138,7 @@
 				B4AD0C4427C00DCA008CBEBB /* Onlab */,
 				B4AD0C4327C00DCA008CBEBB /* Products */,
 				B1A874750BE484918F2CD293 /* Pods */,
-				A206B6849FE271ACF5AF76E5 /* Frameworks */,
+				19740F091E904646AF7D118C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +153,9 @@
 		B4AD0C4427C00DCA008CBEBB /* Onlab */ = {
 			isa = PBXGroup;
 			children = (
+				B4E489B727C6E0D600851286 /* Info.plist */,
+				B4E48D1C27C4F1AE00130BF5 /* RegisterScreenModule */,
+				B4E48D1727C4E7B000130BF5 /* LoginScreenModule */,
 				B4090B5027C17E7E00A9F04C /* IconsListModule */,
 				B4AD0C5827C010B7008CBEBB /* TodoListModule */,
 				B4090B4F27C16C1800A9F04C /* Additional Small Function Views */,
@@ -199,6 +220,27 @@
 			path = ItemAdderModule;
 			sourceTree = "<group>";
 		};
+		B4E48D1727C4E7B000130BF5 /* LoginScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				B4E48D1827C4E7C600130BF5 /* LoginScreenView.swift */,
+				B4E48D1A27C4E84000130BF5 /* LoginScreenPresenter.swift */,
+				B4E48D2327C5567300130BF5 /* LoginScreenInteractor.swift */,
+				B4E48D2527C56B4200130BF5 /* LoginScreenRouter.swift */,
+			);
+			path = LoginScreenModule;
+			sourceTree = "<group>";
+		};
+		B4E48D1C27C4F1AE00130BF5 /* RegisterScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				B4E48D1D27C4F1D500130BF5 /* RegisterScreenView.swift */,
+				B4E48D1F27C4F1FD00130BF5 /* RegisterScreenPresenter.swift */,
+				B4E48D2127C5566700130BF5 /* RegisterScreenInteractor.swift */,
+			);
+			path = RegisterScreenModule;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -206,11 +248,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4AD0C5027C00DCE008CBEBB /* Build configuration list for PBXNativeTarget "Onlab" */;
 			buildPhases = (
-				11CA3FA1F6B12ECBBEA78066 /* [CP] Check Pods Manifest.lock */,
+				D0F2E4EC0A11D6A30EB0CF46 /* [CP] Check Pods Manifest.lock */,
 				B4AD0C3E27C00DCA008CBEBB /* Sources */,
 				B4AD0C3F27C00DCA008CBEBB /* Frameworks */,
 				B4AD0C4027C00DCA008CBEBB /* Resources */,
-				DCBEFDBA0DE5650FA052DCD1 /* [CP] Embed Pods Frameworks */,
+				B4E489B627C6BA0E00851286 /* ShellScript */,
+				3D1474F88741B27A576FC57A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -268,7 +311,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		11CA3FA1F6B12ECBBEA78066 /* [CP] Check Pods Manifest.lock */ = {
+		3D1474F88741B27A576FC57A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Onlab/Pods-Onlab-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Onlab/Pods-Onlab-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Onlab/Pods-Onlab-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4E489B627C6BA0E00851286 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		D0F2E4EC0A11D6A30EB0CF46 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -290,23 +367,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DCBEFDBA0DE5650FA052DCD1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Onlab/Pods-Onlab-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Onlab/Pods-Onlab-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Onlab/Pods-Onlab-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -325,15 +385,23 @@
 				B4AD0C5727C00FBB008CBEBB /* DataModel.swift in Sources */,
 				B4AD0C5A27C010CA008CBEBB /* TodoListView.swift in Sources */,
 				B4AD0C6027C01E7A008CBEBB /* ListItem.swift in Sources */,
+				B4E48D1E27C4F1D500130BF5 /* RegisterScreenView.swift in Sources */,
+				B4E48D2627C56B4200130BF5 /* LoginScreenRouter.swift in Sources */,
 				B4090B5227C17EA200A9F04C /* IconsListView.swift in Sources */,
 				B4AD0C6C27C0E67C008CBEBB /* TodoDetailInteractor.swift in Sources */,
+				B4E48D1B27C4E84000130BF5 /* LoginScreenPresenter.swift in Sources */,
+				B4E48D2227C5566700130BF5 /* RegisterScreenInteractor.swift in Sources */,
 				B4AD0C6A27C0E66E008CBEBB /* TodoDetailView.swift in Sources */,
 				B4AD0C7527C11BAC008CBEBB /* ItemAdderPresenter.swift in Sources */,
+				B4144D8727C7927B00CBF296 /* GoogleSignInButton.swift in Sources */,
 				B4AD0C6527C024CB008CBEBB /* TodoListRouter.swift in Sources */,
 				B4AD0C5527C00E64008CBEBB /* Todo.swift in Sources */,
 				B4AD0C5E27C010EB008CBEBB /* TodoListInteractor.swift in Sources */,
+				B4E48D2027C4F1FD00130BF5 /* RegisterScreenPresenter.swift in Sources */,
 				B4AD0C7327C11BA3008CBEBB /* ItemAdderInteractor.swift in Sources */,
 				B4AD0C4627C00DCA008CBEBB /* OnlabApp.swift in Sources */,
+				B4E48D2427C5567300130BF5 /* LoginScreenInteractor.swift in Sources */,
+				B4E48D1927C4E7C600130BF5 /* LoginScreenView.swift in Sources */,
 				B4090B5827C181B800A9F04C /* IconItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,16 +527,18 @@
 		};
 		B4AD0C5127C00DCE008CBEBB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2065E60C80211ED8CC03C3DA /* Pods-Onlab.debug.xcconfig */;
+			baseConfigurationReference = 14EC82F02F1C93895454E4D9 /* Pods-Onlab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"Onlab/Preview Content\"";
 				DEVELOPMENT_TEAM = 4TP2UP2K7D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Onlab/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -489,7 +559,7 @@
 		};
 		B4AD0C5227C00DCE008CBEBB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE3670905C9D0983D0E67614 /* Pods-Onlab.release.xcconfig */;
+			baseConfigurationReference = E5E6A30372A835404CC7FE14 /* Pods-Onlab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -499,6 +569,7 @@
 				DEVELOPMENT_TEAM = 4TP2UP2K7D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Onlab/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

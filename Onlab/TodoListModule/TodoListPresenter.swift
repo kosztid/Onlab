@@ -22,6 +22,9 @@ class TodoListPresenter: ObservableObject{
           .store(in: &cancellables)
     }
     
+    func signOut(){
+        interactor.signOut()
+    }
     func deleteTodo(_ index: IndexSet) {
       interactor.deleteTodo(index)
     }
@@ -43,5 +46,10 @@ class TodoListPresenter: ObservableObject{
     
     func makeButtonForItemAdderView() -> some View {
         NavigationLink("Add", destination: router.makeAdderView(model: interactor.model))
+    }
+    func makeButtonForSignOut() -> some View {
+        Button{ self.signOut()} label: {
+            Text("Sign Out")
+        }
     }
 }

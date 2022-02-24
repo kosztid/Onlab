@@ -24,6 +24,7 @@ struct ListItem: View {
                         .foregroundColor(todo.isDone ? .green : .red)
                 }
                 .buttonStyle(BorderlessButtonStyle())
+            
                 
         }
         .padding(/*@START_MENU_TOKEN@*/.all, 5.0/*@END_MENU_TOKEN@*/)

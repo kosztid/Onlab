@@ -37,6 +37,15 @@ class IconsListPresenter: ObservableObject{
     func makeButtonForItemAdderView() -> some View {
         NavigationLink("Add", destination: router.makeAdderView(model: interactor.model))
     }
+    func makeButtonForSignOut() -> some View {
+        Button{ self.signOut()} label: {
+            Text("Sign Out")
+        }
+    }
+    
+    func signOut(){
+        interactor.signOut()
+    }
     
     
 }

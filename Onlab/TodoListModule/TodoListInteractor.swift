@@ -13,7 +13,9 @@ class TodoListInteractor {
     init (model: DataModel) {
       self.model = model
     }
-    
+    func signOut(){
+        model.signOut()
+    }
     func addNewTodo(todo: Todo) {
         model.addItem(todo: todo)
     }

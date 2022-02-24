@@ -37,6 +37,7 @@ struct TodoDetailView: View {
                     .font(.system(size: 20))
                     .italic()
                     .frame(maxWidth: .infinity, alignment: .leading)
+                
             }.offset(y:20)
         
             Spacer()

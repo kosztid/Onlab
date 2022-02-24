@@ -21,6 +21,7 @@ struct TodoListView: View {
         }
         .navigationBarTitle("Teendők alkalmazás", displayMode: .inline )
         .navigationBarItems(trailing: presenter.makeButtonForItemAdderView())
+        .navigationBarItems(leading: presenter.makeButtonForSignOut())
     }
 }
 

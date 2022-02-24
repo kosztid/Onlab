@@ -76,6 +76,23 @@ struct LoginScreenView: View {
                             .foregroundColor(.black)
                             .cornerRadius(10)
                     }
+                    
+                    GoogleSignInButton()
+                      .padding()
+                      .onTapGesture {
+                        presenter.twittersignIn()
+                      }
+                  /*  Button{
+                        presenter.twittersignIn()
+                    } label : {
+                        Text("Twitter bejelentkezés")
+                            .frame(height:50)
+                            .frame(maxWidth: .infinity)
+                            .font(.system(size: 20))
+                            .background(Color(#colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)))
+                            .foregroundColor(.black)
+                            .cornerRadius(10)
+                    }*/
                     HStack{
                         Spacer()
                         presenter.toRegisterView()

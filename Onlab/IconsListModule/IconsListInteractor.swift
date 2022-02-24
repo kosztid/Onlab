@@ -14,6 +14,10 @@ class IconsListInteractor{
       self.model = model
     }
     
+    func signOut(){
+        model.signOut()
+    }
+    
     func addNewTodo(todo: Todo) {
         model.addItem(todo: todo)
     }

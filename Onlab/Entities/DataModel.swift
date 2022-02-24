@@ -10,10 +10,12 @@ import SwiftUI
 import Firebase
 import FirebaseFirestore
 import FirebaseAuth
+import GoogleSignIn
 
 final class DataModel: ObservableObject{
     let todoskey: String = "todoskey"
-    let authreg : Auth
+    let auth : Auth
+    let storage : Storage
     @Published var isSignedIn = false
     @Published var count: Int = 0
     @Published var todos: [Todo] = [
@@ -22,10 +24,12 @@ final class DataModel: ObservableObject{
         }
     }
     init(){
-        self.authreg = Auth.auth()
+        self.auth = Auth.auth()
+        self.storage = Storage.storage()
         pullFromDB()
         self.count = todos.count
     }
+    
     
     func pullFromDB(){
         let db = Firestore.firestore()
@@ -76,8 +80,6 @@ final class DataModel: ObservableObject{
         
     }
     func signIn(email: String, password: String){
-        let auth = Auth.auth()
-
         auth.signIn(withEmail: email, password: password) { result, error in
             guard result != nil, error == nil else {
                 return
@@ -89,14 +91,78 @@ final class DataModel: ObservableObject{
         }
     }
     
+    func twittersignIn(){
+          // 1
+          if GIDSignIn.sharedInstance.hasPreviousSignIn() {
+            GIDSignIn.sharedInstance.restorePreviousSignIn { [unowned self] user, error in
+                authenticateUser(for: user, with: error)
+            }
+          } else {
+            // 2
+            guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+            
+            // 3
+            let configuration = GIDConfiguration(clientID: clientID)
+            
+            // 4
+            guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return }
+            guard let rootViewController = windowScene.windows.first?.rootViewController else { return }
+            
+            // 5
+            GIDSignIn.sharedInstance.signIn(with: configuration, presenting: rootViewController) { [unowned self] user, error in
+              authenticateUser(for: user, with: error)
+            }
+          }
+        
+    }
+    
+    private func authenticateUser(for user: GIDGoogleUser?, with error: Error?) {
+      // 1
+      if let error = error {
+        print(error.localizedDescription)
+        return
+      }
+      
+      // 2
+      guard let authentication = user?.authentication, let idToken = authentication.idToken else { return }
+      
+      let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: authentication.accessToken)
+      
+      // 3
+      Auth.auth().signIn(with: credential) { [unowned self] (_, error) in
+        if let error = error {
+          print(error.localizedDescription)
+        } else {
+          self.isSignedIn = true
+        }
+      }
+    }
+    
     func register(email: String, password: String){
-        authreg.createUser(withEmail: email, password: password) { result, error in
+        auth.createUser(withEmail: email, password: password) { result, error in
             guard result != nil, error == nil else {
                 print("error creating user")
                 return
             }
         }
         
+    }
+    func signOut(){
+        try?auth.signOut()
+        DispatchQueue.main.async {
+            self.isSignedIn = false
+        }
+    }
+    
+    func downloadImage(){
+        let storageref = storage.reference().child("images/testphoto.png")
+        storageref.getData(maxSize: 1 * 1024 * 1024) { data, error in
+          if let error = error {
+            
+          } else {
+            //kép betöltése...AnimatedImage???
+          }
+        }
     }
     
     func addItem(todo: Todo){
@@ -105,10 +171,6 @@ final class DataModel: ObservableObject{
         self.count += 1
     }
     func ToggleDone(todo: Todo){
-        /*if let tododx = self.todos.firstIndex(where: {$0 == todo}) {
-            todos[tododx].isDone.toggle()
-        }
-         */
         let db = Firestore.firestore()
         DispatchQueue.main.async {
             db.collection("todos").document(todo.id).setData(["isDone": !todo.isDone], merge: true)
@@ -116,23 +178,4 @@ final class DataModel: ObservableObject{
         self.pullFromDB()
         
     }
-    /*
-    func loadTodos(){
-        guard
-            let todos = UserDefaults.standard.data(forKey: todoskey),
-            let savedTodos = try? JSONDecoder().decode([Todo].self, from: todos)
-        
-        else { return }
-        self.todos = savedTodos
-    }
-     
-    */
-    /*
-    func saveTodos(){
-        if let encodedTodos = try? JSONEncoder().encode(todos){
-            UserDefaults.standard.set(encodedTodos, forKey: todoskey)
-        }
-    }
-     */
-    
 }

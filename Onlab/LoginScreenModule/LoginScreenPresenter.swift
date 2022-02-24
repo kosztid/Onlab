@@ -19,6 +19,9 @@ class LoginScreenPresenter: ObservableObject{
     func signIn(email: String, password: String){
         interactor.signIn(email: email, password: password)
     }
+    func twittersignIn(){
+        interactor.twittersignIn()
+    }
     
     func toRegisterView() -> some View{
         NavigationLink("Regisztráció", destination: router.makeRegisterView(model: interactor.model))
